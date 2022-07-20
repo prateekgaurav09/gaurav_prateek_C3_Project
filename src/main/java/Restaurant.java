@@ -25,6 +25,7 @@ public class Restaurant {
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
+        List<Item> menu = this.menu;
         return menu;
     }
 
@@ -62,4 +63,11 @@ public class Restaurant {
         return name;
     }
 
+    public int getOrderTotal(List<String> selectedItems) {
+        int totalcost =0 ;
+        for (String itemname : selectedItems ) {
+         totalcost = totalcost+findItemByName(itemname).getPrice();
+        }
+        return totalcost;
+    }
 }
