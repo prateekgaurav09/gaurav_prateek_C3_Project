@@ -37,7 +37,7 @@ class RestaurantServiceTest {
 		String restaurantName = "Starbucks";
 		assertThrows(restaurantNotFoundException.class, () -> service.findRestaurantByName(restaurantName), "Restaurant not found");
     }
-    }
+    
     //<<<<<<<<<<<<<<<<<<<<SEARCHING>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
